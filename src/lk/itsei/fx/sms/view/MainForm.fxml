@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="462.0" prefWidth="710.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.itsei.fx.sms.controller.MainFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e3e6ea" height="131.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="710.0" />
+      <ImageView fitHeight="98.0" fitWidth="374.0" layoutX="192.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/logo.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="223.0" layoutY="98.0" prefHeight="30.0" prefWidth="264.0" text="FX Student Management System" textAlignment="RIGHT">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutY="138.0" prefHeight="8.0" prefWidth="710.0" />
+      <ImageView id="imgStudent" fx:id="imgStudent" fitHeight="92.0" fitWidth="86.0" layoutX="14.0" layoutY="152.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/customers.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView id="imgCourse" fx:id="imgCourse" fitHeight="92.0" fitWidth="99.0" layoutX="155.0" layoutY="149.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/items.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView id="imgPayment" fx:id="imgPayment" fitHeight="92.0" fitWidth="92.0" layoutX="459.0" layoutY="149.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/orders.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView id="imgRegistration" fx:id="imgRegistration" fitHeight="92.0" fitWidth="86.0" layoutX="312.0" layoutY="152.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/registration.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView id="imgSearchStudent" fx:id="imgSearchStudent" fitHeight="68.0" fitWidth="108.0" layoutX="588.0" layoutY="161.0" onMouseClicked="#navigate" onMouseEntered="#playMouseEnterAnimation" onMouseExited="#playMouseExitAnimation" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/search3.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView id="imgLogOut" fx:id="imgLogOut" fitHeight="73.0" fitWidth="69.0" layoutX="623.0" layoutY="13.0" onMouseClicked="#btnLogOut_OnMouseClick" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/logOut.png" />
+         </image>
+      </ImageView>
+      <Label id="lblMenu" fx:id="lblMenu" alignment="CENTER" layoutX="231.0" layoutY="337.0" prefHeight="38.0" prefWidth="264.0" text="Welcome" textFill="#1642c4">
+         <font>
+            <Font name="System Bold" size="29.0" />
+         </font>
+      </Label>
+      <Label id="lblDescription" fx:id="lblDescription" alignment="CENTER" layoutX="64.0" layoutY="390.0" prefHeight="30.0" prefWidth="582.0" text="Please select one of above main operations to proceed">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

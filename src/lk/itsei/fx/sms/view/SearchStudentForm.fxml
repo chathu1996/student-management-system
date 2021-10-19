@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="554.0" prefWidth="761.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.itsei.fx.sms.controller.SearchStudentFormController">
+   <children>
+      <ImageView id="imgHome" fx:id="imgHome" fitHeight="92.0" fitWidth="88.0" layoutX="6.0" layoutY="7.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/home-icon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="120.0" layoutY="27.0" prefHeight="47.0" prefWidth="225.0" text="Search Student">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField layoutX="14.0" layoutY="115.0" prefHeight="33.0" prefWidth="738.0" promptText="Enter Student ID to find the Registered Course : ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TableView id="tblRegistered" fx:id="tblRegistered" layoutX="14.0" layoutY="179.0" prefHeight="360.0" prefWidth="738.0">
+        <columns>
+          <TableColumn prefWidth="95.2000150680542" text="Student ID" />
+          <TableColumn prefWidth="155.1999969482422" text="Student Name" />
+            <TableColumn prefWidth="170.39996337890625" text="Registered Date" />
+            <TableColumn prefWidth="144.79998779296875" text="Course ID" />
+            <TableColumn prefWidth="172.800048828125" text="Course Name" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

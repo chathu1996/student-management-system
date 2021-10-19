@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="615.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.itsei.fx.sms.controller.ManageCourseFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#ebf0f4" height="68.0" onMouseClicked="#navigateToHome" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="850.0" />
+      <ImageView id="imgHome" fx:id="imgHome" fitHeight="62.0" fitWidth="78.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/home-icon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="117.0" layoutY="22.0" prefHeight="44.0" prefWidth="222.0" text="Manage Course">
+         <font>
+            <Font name="System Bold" size="28.0" />
+         </font>
+      </Label>
+      <Button id="btnAddNew" fx:id="btnAddNew" layoutX="596.0" layoutY="12.0" mnemonicParsing="false" onAction="#btnAddNew_OnAction" prefHeight="53.0" prefWidth="186.0" style="-fx-background-color: blue;" text="Add A New Course">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <TextField id="txtCourseId" fx:id="txtCourseId" layoutX="39.0" layoutY="86.0" prefHeight="36.0" prefWidth="779.0" promptText="Course ID :">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <TextField id="txtCourseDuration" fx:id="txtCourseDuration" layoutX="42.0" layoutY="134.0" prefHeight="36.0" prefWidth="779.0" promptText="Course Duration (In Months) :">
+         <font>
+            <Font size="15.0" />
+         </font></TextField>
+      <TextField id="txtCourseName" fx:id="txtCourseName" layoutX="42.0" layoutY="176.0" prefHeight="36.0" prefWidth="779.0" promptText="Course Name : " />
+      <TextField id="txtCoursePrice" fx:id="txtCoursePrice" layoutX="42.0" layoutY="222.0" prefHeight="36.0" prefWidth="779.0" promptText="Course Price : " />
+      <Button id="btnSave" fx:id="btnSave" layoutX="67.0" layoutY="326.0" mnemonicParsing="false" onAction="#btnSave_OnAction" prefHeight="36.0" prefWidth="78.0" style="-fx-background-color: blue;" text="Save">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnDelete" layoutX="164.0" layoutY="326.0" mnemonicParsing="false" onAction="#btnDelete_OnAction" prefHeight="36.0" prefWidth="78.0" style="-fx-background-color: yellow;" text="Delete" textFill="#181616">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button id="btnViewBlockCourse" fx:id="btnViewBlockCourse" layoutX="278.0" layoutY="326.0" mnemonicParsing="false" onAction="#btnViewBlockCourse_OnAction" prefHeight="36.0" prefWidth="208.0" style="-fx-background-color: brown;" text="View Block Course">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Button>
+      <TableView id="tblCourse" fx:id="tblCourse" layoutX="11.0" layoutY="371.0" prefHeight="239.0" prefWidth="830.0">
+        <columns>
+          <TableColumn prefWidth="111.99996948242188" text="Course ID" />
+          <TableColumn prefWidth="224.79999542236328" text="Course Duration (In Months)" />
+           <TableColumn prefWidth="181.59994506835938" text="Course Name" />
+           <TableColumn prefWidth="160.0001220703125" text="Course Price (Rupees)" />
+           <TableColumn prefWidth="194.39990234375" text="Course Status" />
+        </columns>
+      </TableView>
+      <Button id="btnViewPendingCourse" fx:id="btnViewPendingCourse" layoutX="519.0" layoutY="326.0" mnemonicParsing="false" onAction="#btnViewPendingCourse_OnAction" prefHeight="36.0" prefWidth="195.0" text="View Pending Courses" />
+      <ComboBox id="txtCmb" fx:id="txtCmb" layoutX="42.0" layoutY="270.0" prefHeight="30.0" prefWidth="195.0" promptText="Select Course Status" />
+   </children>
+</AnchorPane>

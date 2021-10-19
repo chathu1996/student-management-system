@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="580.0" prefWidth="788.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.itsei.fx.sms.controller.ViewStudentFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0f1aa8" height="80.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="788.0" />
+      <Label id="lblMainNav" fx:id="lblMainNav" layoutX="14.0" layoutY="19.0" onMouseClicked="#navigateToMain" prefHeight="39.0" prefWidth="108.0" text="ITSEI FX SMS" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Separator layoutX="119.0" layoutY="6.0" orientation="VERTICAL" prefHeight="66.0" prefWidth="0.0" />
+      <Label layoutX="141.0" layoutY="22.0" prefHeight="47.0" prefWidth="272.0" text="View Student Summury" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <TextField id="txtRegistrationId" fx:id="txtRegistrationId" layoutX="14.0" layoutY="95.0" prefHeight="30.0" prefWidth="218.0" promptText="Enter Registration ID : ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField id="txtStudentId" fx:id="txtStudentId" layoutX="14.0" layoutY="141.0" prefHeight="30.0" prefWidth="218.0" promptText="Enter Student ID : ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField id="txtStudentName" fx:id="txtStudentName" layoutX="428.0" layoutY="148.0" prefHeight="30.0" prefWidth="218.0" promptText="Enter Student Name : ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <DatePicker id="txtRegDate" fx:id="txtRegDate" layoutX="428.0" layoutY="98.0" prefHeight="31.0" prefWidth="218.0" />
+      <Separator layoutY="195.0" prefHeight="3.0" prefWidth="788.0" />
+      <TextField id="txtCourseId" fx:id="txtCourseId" layoutX="14.0" layoutY="208.0" prefHeight="31.0" prefWidth="218.0" promptText="Enter Course ID : ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField id="txtCourseName" fx:id="txtCourseName" layoutX="428.0" layoutY="211.0" prefHeight="31.0" prefWidth="218.0" promptText="Enter Course Name : ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField id="txtCoursePrice" fx:id="txtCoursePrice" layoutX="14.0" layoutY="253.0" prefHeight="31.0" prefWidth="218.0" promptText="Enter Course Price : ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField id="txtCourseDuration" fx:id="txtCourseDuration" layoutX="428.0" layoutY="256.0" prefHeight="31.0" prefWidth="218.0" promptText="Enter Course Duation : ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TableView id="tblRegistrationDetail" fx:id="tblRegistrationDetail" layoutX="14.0" layoutY="295.0" prefHeight="231.0" prefWidth="753.0">
+        <columns>
+          <TableColumn prefWidth="119.19999504089355" text="Student ID" />
+          <TableColumn prefWidth="168.0000228881836" text="Student Name" />
+            <TableColumn prefWidth="138.39996337890625" text="Course ID" />
+            <TableColumn prefWidth="170.39999389648438" text="Course Name" />
+            <TableColumn prefWidth="160.79998779296875" text="Course Duration" />
+        </columns>
+      </TableView>
+      <Label id="lblCourseName" fx:id="lblCourseName" layoutX="22.0" layoutY="537.0" prefHeight="31.0" prefWidth="132.0" text="Course Name : ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

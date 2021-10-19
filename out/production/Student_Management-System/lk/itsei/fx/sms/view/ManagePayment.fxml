@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="595.0" prefWidth="761.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.itsei.fx.sms.controller.ManagPaymentFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1b44d1" height="55.0" layoutX="-14.0" layoutY="-1.0" stroke="#1c1342" strokeType="INSIDE" strokeWidth="0.0" width="775.0" />
+      <ImageView id="imgHome" fx:id="imgHome" fitHeight="55.0" fitWidth="65.0" layoutX="2.0" layoutY="1.0" onMouseClicked="#navigateToHome" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../asset/home-icon.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <Label layoutX="102.0" layoutY="9.0" prefHeight="38.0" prefWidth="240.0" text="Manage Payments">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button id="btnAddNewPayment" fx:id="btnAddNewPayment" layoutX="571.0" layoutY="7.0" mnemonicParsing="false" onAction="#btnAddNewPayment_OnAction" prefHeight="38.0" prefWidth="186.0" style="-fx-background-color: blue;" text="Add A Payment">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <TextField id="txtPaymentAmout" fx:id="txtPaymentAmout" layoutX="2.0" layoutY="172.0" prefHeight="31.0" prefWidth="662.0" promptText="Payment Amount : ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField id="txtCvc" fx:id="txtCvc" layoutX="2.0" layoutY="212.0" prefHeight="31.0" prefWidth="662.0" promptText="CVC : ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField id="txtCardNumber" fx:id="txtCardNumber" layoutX="2.0" layoutY="289.0" prefHeight="31.0" prefWidth="662.0" promptText="Card Number : ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </TextField>
+      <Button id="btnPay" fx:id="btnPay" layoutX="303.0" layoutY="330.0" mnemonicParsing="false" onAction="#btnPay_OnAction" prefHeight="38.0" prefWidth="110.0" style="-fx-background-color: yellow;" text="Pay" textFill="#080808">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <TextField id="txtPaymentId" fx:id="txtPaymentId" layoutX="2.0" layoutY="56.0" prefHeight="31.0" prefWidth="662.0" promptText="Payment ID : ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField id="txtStudentId" fx:id="txtStudentId" layoutX="2.0" layoutY="96.0" prefHeight="26.0" prefWidth="662.0" promptText="Enter Student ID : ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField id="txtCourseName" fx:id="txtCourseName" layoutX="2.0" layoutY="134.0" prefHeight="26.0" prefWidth="662.0" promptText="Enter Course Name : ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TableView id="tblPaymentDetail" fx:id="tblPaymentDetail" layoutX="1.0" layoutY="369.0" prefHeight="218.0" prefWidth="760.0">
+        <columns>
+          <TableColumn prefWidth="100.80001986026764" text="Payment ID" />
+          <TableColumn prefWidth="83.99999237060547" text="Student ID" />
+            <TableColumn prefWidth="102.39996337890625" text="Course Name" />
+            <TableColumn prefWidth="139.99993896484375" text="Payment Amount" />
+            <TableColumn prefWidth="71.20001220703125" text="CVC" />
+            <TableColumn prefWidth="146.39993286132812" text="Card Expire Date" />
+            <TableColumn prefWidth="112.7999267578125" text="Card Number" />
+        </columns>
+      </TableView>
+      <TextField id="txtExpireDate" fx:id="txtExpireDate" layoutX="2.0" layoutY="255.0" prefHeight="26.0" prefWidth="662.0" promptText="Enter Expire Date : " />
+   </children>
+</AnchorPane>

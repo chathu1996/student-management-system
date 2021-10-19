@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="root" prefHeight="638.0" prefWidth="994.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.itsei.fx.sms.controller.RegistrationDetailsFormController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#0f1aa8" height="54.0" layoutX="-20.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="954.0" />
+      <Label id="lblMainNav" fx:id="lblMainNav" layoutX="8.0" layoutY="12.0" onMouseClicked="#navigateToMain" prefHeight="30.0" prefWidth="91.0" text="ITSEI FX SMS" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Label>
+      <Separator layoutX="105.0" layoutY="-57.0" orientation="VERTICAL" prefHeight="113.0" prefWidth="0.0" />
+      <Label layoutX="147.0" layoutY="6.0" prefHeight="42.0" prefWidth="193.0" text="Register Student" textFill="#fffafa">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <Button id="btnRegisterNewStudent" fx:id="btnRegisterNewStudent" layoutX="719.0" layoutY="6.0" mnemonicParsing="false" onAction="#btnRegisterNewStudent_onAction" prefHeight="42.0" prefWidth="194.0" text="Register New Student">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <TextField id="txtRegisterId" fx:id="txtRegisterId" layoutX="14.0" layoutY="64.0" prefHeight="26.0" prefWidth="253.0" promptText="Enter Registration ID : ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField id="txtStudentId" fx:id="txtStudentId" layoutX="14.0" layoutY="98.0" onAction="#txtStudentId_OnAction" prefHeight="26.0" prefWidth="254.0" promptText="Enter Student ID : ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField id="txtStudentName" fx:id="txtStudentName" layoutX="422.0" layoutY="99.0" prefHeight="26.0" prefWidth="254.0" promptText="Enter Student Name : ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Separator layoutY="133.0" prefHeight="5.0" prefWidth="913.0" />
+      <TextField id="txtCourseId" fx:id="txtCourseId" layoutX="13.0" layoutY="151.0" onAction="#txtCourseId_onAction" prefHeight="26.0" prefWidth="254.0" promptText="Enter Course ID : ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField id="txtCourseName" fx:id="txtCourseName" layoutX="422.0" layoutY="151.0" prefHeight="26.0" prefWidth="254.0" promptText="Enter Course Name :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <TextField id="txtCoursePrice" fx:id="txtCoursePrice" layoutX="422.0" layoutY="191.0" prefHeight="30.0" prefWidth="254.0" promptText="Enter Course Fee : " />
+      <TextField id="txtCourseStatus" fx:id="txtCourseStatus" layoutX="14.0" layoutY="239.0" prefHeight="26.0" prefWidth="254.0" promptText="Enter Course Status ; ">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </TextField>
+      <Button id="btnSave" fx:id="btnSave" layoutX="457.0" layoutY="246.0" mnemonicParsing="false" onAction="#btnSave_onAction" prefHeight="30.0" prefWidth="91.0" style="-fx-background-color: green;" text="Save">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <Button id="btnDelete" fx:id="btnDelete" layoutX="584.0" layoutY="246.0" mnemonicParsing="false" onAction="#btnDelete_onAction" prefHeight="30.0" prefWidth="91.0" style="-fx-background-color: red;" text="Delete">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+      <TableView id="tblRegistrationDetails" fx:id="tblRegistrationDetails" layoutX="4.0" layoutY="277.0" prefHeight="302.0" prefWidth="936.0">
+        <columns>
+          <TableColumn prefWidth="100.7999849319458" text="Registration ID" />
+          <TableColumn prefWidth="92.0" text="Student ID" />
+            <TableColumn prefWidth="112.80003356933594" text="Student Name" />
+            <TableColumn prefWidth="97.60003662109375" text="Course ID" />
+            <TableColumn prefWidth="137.5999755859375" text="Course Name" />
+            <TableColumn prefWidth="109.60003662109375" text="Course Price" />
+            <TableColumn prefWidth="107.2000732421875" text="Course Status" />
+            <TableColumn prefWidth="172.7999267578125" sortType="DESCENDING" text="Course Duration(In Months)" />
+        </columns>
+      </TableView>
+      <TextField id="txtCourseDuration" fx:id="txtCourseDuration" layoutX="14.0" layoutY="196.0" prefHeight="30.0" prefWidth="254.0" promptText="Enter Course Duration(In Months)" />
+   </children>
+</AnchorPane>
